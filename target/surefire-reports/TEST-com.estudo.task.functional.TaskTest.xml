@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.estudo.task.functional.TaskTest" time="36.83" tests="4" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/joao_vitor/.sdkman/candidates/maven/3.8.5/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.vendor" value="BellSoft"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://bell-sw.com/"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="maven.conf" value="/home/joao_vitor/.sdkman/candidates/maven/3.8.5/conf"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="os.name" value="Linux"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.boot.library.path" value="/home/joao_vitor/.sdkman/candidates/java/17.0.3.fx-librca/lib"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="maven.home" value="/home/joao_vitor/.sdkman/candidates/maven/3.8.5"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/joao_vitor"/>
+    <property name="user.language" value="pt"/>
+    <property name="sun.stderr.encoding" value="UTF-8"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2022-04-19"/>
+    <property name="java.home" value="/home/joao_vitor/.sdkman/candidates/java/17.0.3.fx-librca"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="sun.stdout.encoding" value="UTF-8"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.3+7-LTS"/>
+    <property name="user.name" value="joao_vitor"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.13.0-51-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.url.bug" value="https://bell-sw.com/support"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="17.0.3"/>
+    <property name="user.dir" value="/home/joao_vitor/Documentos/dev/curso_ci-cd/task-functional-test"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/joao_vitor/Documentos/dev/curso_ci-cd/task-functional-test"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="BellSoft"/>
+    <property name="java.vm.version" value="17.0.3+7-LTS"/>
+    <property name="classworlds.conf" value="/home/joao_vitor/.sdkman/candidates/maven/3.8.5/bin/m2.conf"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="library.jansi.path" value="/home/joao_vitor/.sdkman/candidates/maven/3.8.5/lib/jansi-native"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="naoDeveSalvarTarefaSemDescricao" classname="com.estudo.task.functional.TaskTest" time="36.801"/>
+  <testcase name="naoDeveSalvarTarefaComDataPassada" classname="com.estudo.task.functional.TaskTest" time="19.129"/>
+  <testcase name="naoDeveSalvarTarefaSemData" classname="com.estudo.task.functional.TaskTest" time="19.124"/>
+  <testcase name="deveSalvarTarefaComSucesso" classname="com.estudo.task.functional.TaskTest" time="36.83"/>
+</testsuite>

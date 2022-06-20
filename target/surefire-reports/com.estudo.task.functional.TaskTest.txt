@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.estudo.task.functional.TaskTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 36.83 s - in com.estudo.task.functional.TaskTest

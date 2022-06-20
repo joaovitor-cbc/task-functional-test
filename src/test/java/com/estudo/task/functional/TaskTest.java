@@ -1,5 +1,7 @@
 package com.estudo.task.functional;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
@@ -8,22 +10,30 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class TaskTest {
 
 	private WebDriver driver;
 	
+	private DesiredCapabilities capabilities;
+	
+	private final String HUB = "http://172.19.0.1:4444/wd/hub";
+	
+	private final String HOST_APP = "http://172.19.0.1:8001/tasks";
+	
 	@Before
-	public void setup() {
-		driver = new ChromeDriver();
+	public void setup() throws MalformedURLException {
+		capabilities = DesiredCapabilities.chrome();
+		driver = new RemoteWebDriver(new URL(HUB), capabilities);
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 	}
 	
 	@Test
 	public void deveSalvarTarefaComSucesso() throws InterruptedException {
 		try {
-			driver.navigate().to("http://localhost:8001/tasks");
+			driver.navigate().to(HOST_APP);
 			Thread.sleep(Duration.ofSeconds(2).toMillis());
 			driver.findElement(By.id("addTodo")).click();
 			Thread.sleep(Duration.ofSeconds(2).toMillis());
@@ -45,7 +55,7 @@ public class TaskTest {
 	@Test
 	public void naoDeveSalvarTarefaComDataPassada() throws InterruptedException {
 		try {
-			driver.navigate().to("http://localhost:8001/tasks");
+			driver.navigate().to(HOST_APP);
 			Thread.sleep(Duration.ofSeconds(2).toMillis());
 			driver.findElement(By.id("addTodo")).click();
 			Thread.sleep(Duration.ofSeconds(2).toMillis());
@@ -67,7 +77,7 @@ public class TaskTest {
 	@Test
 	public void naoDeveSalvarTarefaSemData() throws InterruptedException {
 		try {
-			driver.navigate().to("http://localhost:8001/tasks");
+			driver.navigate().to(HOST_APP);
 			Thread.sleep(Duration.ofSeconds(2).toMillis());
 			driver.findElement(By.id("addTodo")).click();
 			Thread.sleep(Duration.ofSeconds(2).toMillis());
@@ -89,7 +99,7 @@ public class TaskTest {
 	@Test
 	public void naoDeveSalvarTarefaSemDescricao() throws InterruptedException {
 		try {
-			driver.navigate().to("http://localhost:8001/tasks");
+			driver.navigate().to(HOST_APP);
 			Thread.sleep(Duration.ofSeconds(2).toMillis());
 			driver.findElement(By.id("addTodo")).click();
 			Thread.sleep(Duration.ofSeconds(2).toMillis());
